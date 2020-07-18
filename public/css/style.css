@@ -1,0 +1,179 @@
+body {
+	margin: 0;
+	overflow: hidden;
+	background-color: rgb(7, 25, 31);
+	height: 100vh;
+	width: 100vw;
+	font-family: Helvetica, sans-serif;
+	font-size: 12pt;
+}
+
+.board {
+	height: 100vmin;
+	width: 100vmin;
+	margin: 0 auto;
+}
+
+.tile {
+	min-height: 9.090909vmin;
+	min-width: 9.090909vmin;
+	float: left;
+}
+
+.tile:nth-child(odd) {
+	background-color: rgba(255, 255, 255, 0.050);
+}
+
+.tile:nth-child(even) {
+	background-color: rgba(255, 255, 255, 0.025);
+}
+
+.gameForm {
+	position: absolute;
+	top: 0px;
+	left: 0px
+} 
+
+#gamePanel {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+#gamePanel p {
+	line-height: 0;
+}
+
+#instructionPanel {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	color: white;
+	width: 290px;
+	background-color: rgba(255, 255, 255, 0.075);
+	border-radius: 5px;
+}
+
+/* #instructionPanel h4 {
+	line-height: normal;
+	margin: 5px;
+	text-align: center;
+} */
+
+#instructionPanel button {
+	color: white;
+	border: 0;
+	border-radius: 0px 0px 5px 5px;
+	background-color: rgba(7, 25, 31, 0.5);
+	width: 290px;
+	/* margin-bottom: 5px; */
+	padding: 10px;
+	align-self: center;
+	
+}
+
+#instructionPanel button:focus{
+	outline: none;
+}
+
+#instructionPanel button:active{
+	outline: none;
+	background-color: rgba(7, 25, 31, .85);
+}
+
+#instructionPanel input {
+	color: white;
+	background-color: rgba(7, 25, 31, 0.5);
+	width: 290px;
+	/* margin-top: 5px; */
+	padding: 10px;
+	box-sizing: border-box;
+	border-radius: 5px 5px 0px 0px;
+	border: 0px solid rgba(0, 0, 0, 0);
+	align-self:center;
+}
+
+#instructionPanel input:focus{
+	background-color: rgba(7, 25, 31, 0.15);
+	color: white;
+	outline: none;
+}
+
+#instructionPanel ul {
+	list-style: none;
+	background-color: rgba(255, 255, 255, 0);
+	margin: 0;
+	padding: 0px;
+}
+
+#instructionPanel li {
+	padding: 5px 10px 5px 10px;
+	font-size: 0.8rem;
+}
+
+#instructionPanel li:hover {
+	background-color: rgba(255, 0, 0, 0.256);
+	transition: 300ms
+}
+
+.playerUnit {
+	position: absolute;
+	display: flex;
+	width: 9.090909vmin;
+	height: 9.090909vmin;
+	background-image: url("../img/player1.png");
+	background-size: 9.090909vmin 9.090909vmin;
+	transition: transform 101ms ease 0s;	
+}
+
+.playerUnitName {
+	font-weight: 600;
+	color: white;
+	font-size: 0.75rem;
+	padding: 0;
+	margin: 0 auto;
+	transform: translateY(-5px);
+}
+
+#chatbox {
+	position: absolute;
+	color: white;
+	bottom: 10px;
+	left: 10px;
+	background-color: rgba(255, 255, 255, 0.075);
+}
+
+#chatbox input {
+	color: white;
+	width: 400px;
+	background-color: rgba(7, 25, 31, 0.5);
+	/* margin-top: 5px; */
+	padding: 10px;
+	box-sizing: border-box;
+	border-radius: 0;
+	border: 0px solid rgba(0, 0, 0, 0);
+	align-self:center;
+}
+
+#chatbox input:focus {
+	color: white;
+	background-color: rgba(7, 25, 31, 0.15);
+	outline: none;
+}
+
+#chatbox ul {
+	color: white;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#chatbox li {
+	padding: 5px 10px 5px 10px;
+	font-size: 0.8rem;
+}
+
+/* Note
+Make it such that players container will offset a little bit to make things in the middle */
